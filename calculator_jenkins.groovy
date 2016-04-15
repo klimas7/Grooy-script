@@ -9,49 +9,49 @@ config.putAll(envVarsMap)
 def numeral_system = config.get("numeral_system")
 
 int first=a.toInteger();
-int secand=b.toInteger();
+int second=b.toInteger();
 
-def ansver = 0;
+def answer = 0;
 
 switch (operation) {
     case "+":
-     ansver = first + secand;
+     answer = first + second;
     break;
     case "-":
-     ansver = first - secand;
+     answer = first - second;
     break;
     case "*":
-     ansver = first * secand;
+     answer = first * second;
     break;
     case "/":
-     if (secand == 0)
+     if (second == 0)
      {
-       ansver = 'nan'
+       answer = 'nan'
      }
      else
      {
-       ansver = first / secand;
+       answer = first / second;
      }
     break;
 }
 
-def sAnsver;
+def sAnswer;
 
 switch (numeral_system)
 {
   case "hex":
-   sAnsver = Integer.toHexString(ansver);
+   sAnswer = Integer.toHexString(answer);
   break;
   case "oct":
-   sAnsver = Integer.toOctalString(ansver);
+   sAnswer = Integer.toOctalString(answer);
   break;
   case "bin":
-   sAnsver = Integer.toBinaryString(ansver);
+   sAnswer = Integer.toBinaryString(answer);
   break;
   default:
-    sAnsver = Integer.toString(ansver);
+    sAnswer = Integer.toString(answer);
 }
 
  
 
-println first + " " + operation + " " + secand + " = " + sAnsver
+println first + " " + operation + " " + second + " = " + sAnswer
